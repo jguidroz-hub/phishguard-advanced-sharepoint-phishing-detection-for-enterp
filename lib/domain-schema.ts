@@ -43,7 +43,7 @@ export const organizationProfiles = pgTable('organization_profiles', {
   userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
   orgName: text('org_name').notNull(),
   domain: text('domain').unique(),
-  riskThreshold: text('risk_threshold').default(0.7),
+  riskThreshold: text('risk_threshold').default('0.7'),
   advancedDetection: boolean('advanced_detection').default(true),
   createdAt: timestamp('created_at').default(sql`now()`),
   updatedAt: timestamp('updated_at').default(sql`now()`),
