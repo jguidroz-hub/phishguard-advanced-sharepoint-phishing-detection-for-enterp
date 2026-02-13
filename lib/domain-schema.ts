@@ -7,8 +7,8 @@ export const userSettings = pgTable('user_settings', {
   id: text('id').primaryKey(),
   userId: text('user_id').notNull().unique().references(() => users.id, { onDelete: 'cascade' }),
   timezone: text('timezone').default('UTC'),
-  emailNotifications: boolean('email_notifications').default(true),
-  weeklyDigest: boolean('weekly_digest').default(true),
+  emailNotifications: boolean('email_notifications').default('true'),
+  weeklyDigest: boolean('weekly_digest').default('true'),
   createdAt: timestamp('created_at').notNull().default(sql`now()`),
   updatedAt: timestamp('updated_at').notNull().default(sql`now()`),
 });
@@ -44,7 +44,7 @@ export const organizationProfiles = pgTable('organization_profiles', {
   orgName: text('org_name').notNull(),
   domain: text('domain').unique(),
   riskThreshold: text('risk_threshold').default(0.7),
-  advancedDetection: boolean('advanced_detection').default(true),
+  advancedDetection: boolean('advanced_detection').default('true'),
   createdAt: timestamp('created_at').default(sql`now()`),
   updatedAt: timestamp('updated_at').default(sql`now()`),
 });
