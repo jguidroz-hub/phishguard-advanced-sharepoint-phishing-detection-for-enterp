@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'PhishGuard - Advanced SharePoint phishing detection for enterprise email security',
-  description: 'Value Proposition: Detects sophisticated credential phishing attacks using compromised SharePoint links that bypass Mimecast and Defender, protecting enterprises from advanced social engineering.',
+  description: 'Value Proposition: Detects sophisticated credential phishing attacks using compromised SharePoint li',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
